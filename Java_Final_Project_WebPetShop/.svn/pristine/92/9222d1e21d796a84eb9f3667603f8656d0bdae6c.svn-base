@@ -1,0 +1,15 @@
+spring.datasource.url=jdbc:sqlserver://localhost;databaseName=Project_Final_WebsitePet
+spring.datasource.username=sa
+spring.datasource.password=songlong
+spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.show-sql=true
+spring.jpa.hibernate.dialect=org.hibernate.dialect.SQLServer2014Dialect
+spring.jpa.hibernate.ddl-auto = update
+spring.jpa.properties.hibernate.format_sql=true 
+spring.jpa.hibernate.naming.strategy=org.hibernate.cfg.ImprovedNamingStrategy=true
+spring.jpa.properties.hibernate.dialect.1=org.hibernate.dialect.SQLServerDialect
+spring.jpa.properties.hibernate.globally_quoted_identifiers=true
+server.port=8081
+spring.mandatory-file-encoding=UTF-8
+spring.http.encoding.charset=UTF-8
+spring.http.encoding.enabled=true

@@ -1,0 +1,10 @@
+package reponsitory;
+
+import org.springframework.data.repository.CrudRepository;
+
+import entity.breedEntity;
+
+
+public interface BreedRepositoty extends CrudRepository<breedEntity, Integer>  {
+	
+}

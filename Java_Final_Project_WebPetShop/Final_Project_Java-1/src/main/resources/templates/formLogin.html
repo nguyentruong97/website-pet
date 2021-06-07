@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/formLogin.css}">
+    <link rel="stylesheet" th:href="@{/bootstrap5/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/node_modules/bootstrap-icons/font/bootstrap-icons.css}">
+<!-- JavaScript Bundle with Popper -->
+
+    <script type="text/javascript" th:src="@{/bootstrap5/js/bootstrap.js}"></script>
+    <script type="text/javascript" th:src="@{bootstrap5/js/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/node_modules/bootstrap-icons/font/bootstrap-icons.json}"></script>
+    <title>Login</title>
+</head>
+<script>
+$(document).ready(function(){
+	var myToastEl = document.getElementById('toastNotice')
+	myToastEl.addEventListener('show.bs.toast', function () {
+		myToastEl.show()
+	})
+});
+</script>
+<body>
+    <div class="mainContent">
+    <form  action="#" th:action="@{/login/getLogin}" th:object="${user}" method="post">
+        <div class="myForm">
+            <div class="text1">
+                <p>Login</p>
+            </div>
+            <div class="inputClass">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Tài khoản</span>
+                    <input required th:field="*{userName}" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Mật khẩu</span>
+                    <input required th:field="*{password}" type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </div>
+            <div class="btnClass">
+                <div class="btnLogin">
+                    <button type="submit"class="btn btn-outline-success"role="button">Đăng nhập</button>
+                </div>
+                <div class="btnBack">
+                    <a type="button" class="btn btn-outline-secondary" role="button">Quay lại</a>
+                </div>
+
+            </div>
+            <div class="text2">
+                <p>Chưa có tài khoản hãy </p> <a href="login/register"> đăng ký tại đây!</a>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+
+
+<div aria-live="polite" aria-atomic="true" class="position-relative" >
+  <div class="toast-container position-absolute top-0 end-0 p-3">
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="toastNotice">
+      <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">Bootstrap</strong>
+        <small class="text-muted">just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        See? Just like this.
+      </div>
+    </div>
+
+  
+  </div>
+</div>
+
+
+</html>

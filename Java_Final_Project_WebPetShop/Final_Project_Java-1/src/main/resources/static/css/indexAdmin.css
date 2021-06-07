@@ -1,0 +1,43 @@
+body .siderBar {
+    width: 15%;
+    height: 1000px;
+    float: left;
+    background-color: rgb(58, 58, 58);
+}
+
+body .mainContent {
+    width: 85%;
+    height: 1000px;
+    float: left;
+    background-color: rgb(241, 241, 241);
+}
+
+body .logo {
+    margin: 20px 0 0 0;
+}
+
+body .siderBar hr {
+    background-color: white;
+}
+
+body li {
+    list-style: none;
+}
+
+body li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 0 20px 10px;
+}
+
+body li a p {
+    display: inline-block;
+    padding: 0px 0 0px 10px;
+    font-size: 18px;
+}
+
+body li .bi {
+    color: white;
+    font-size: 18px;
+}

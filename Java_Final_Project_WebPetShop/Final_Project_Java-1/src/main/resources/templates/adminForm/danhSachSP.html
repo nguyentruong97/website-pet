@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/dachSachSP.css}">
+    <link rel="stylesheet" th:href="@{/bootstrap5/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/node_modules/bootstrap-icons/font/bootstrap-icons.css}">
+    <script type="text/javascript" th:src="@{/bootstrap5/js/bootstrap.js}"></script>
+    <script type="text/javascript" th:src="@{bootstrap5/js/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/node_modules/bootstrap-icons/font/bootstrap-icons.json}"></script>
+    <title>Danh sách sản phẩm</title>
+</head>
+
+<body>
+    <div>
+        <p>Danh sách đơn hàng</p>
+    </div>
+
+    <div class="btnSearch">
+        <div class="input-group input-group-lg">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Tìm kiếm</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Tìm kiếm đơn hàng theo số điện thoại">
+        </div>
+
+    </div>
+    <div class="content">
+        <div class="tableContent">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Mã Đơn hàng</th>
+                        <th scope="col">Tên khách hàng</th>
+                        <th scope="col">SĐT</th>
+                        <th scope="col">Địa chỉ</th>
+                        <th scope="col">Trạng thái</th>
+                        <th scope="col">Tổng tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Đơn hàng 01</td>
+                        <td>Tùng</td>
+                        <td>0123456789</td>
+                        <td>Hà Nội</td>
+                        <td><span class="badge bg-success">
+                            <p>Hoàn thành</p>
+                        </span></td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

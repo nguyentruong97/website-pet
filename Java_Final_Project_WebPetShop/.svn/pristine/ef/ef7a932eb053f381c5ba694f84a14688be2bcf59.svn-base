@@ -1,0 +1,9 @@
+package reponsitory;
+
+import org.springframework.data.repository.CrudRepository;
+
+import entity.sizeEntity;
+
+public interface SizeRepositoty extends CrudRepository<sizeEntity, Integer> {
+
+}

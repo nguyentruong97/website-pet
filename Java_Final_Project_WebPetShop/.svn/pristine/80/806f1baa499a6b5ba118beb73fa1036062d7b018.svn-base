@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/indexAdmin.css}">
+    <link rel="stylesheet" th:href="@{/bootstrap5/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/node_modules/bootstrap-icons/font/bootstrap-icons.css}">
+	<script type="text/javascript" th:src="@{/bootstrap5/js/bootstrap.js}"></script>
+    <script type="text/javascript" th:src="@{bootstrap5/js/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/node_modules/bootstrap-icons/font/bootstrap-icons.json}"></script>
+    <title>Home Admin</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        box-sizing: border-box;
+        line-height: 1.5;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+</style>
+
+<body>
+    <div class="siderBar">
+        <div class="logo">
+            <img src="/image/PETSHOPTest.png" alt="">
+        </div>
+        <div>
+            <hr>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-person"></i>
+                        <p>Thông tin tài khoản</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-card-list"></i>
+                        <p>DSSP Trong cửa hàng</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-table"></i>
+                        <p>Tạo đơn hàng</p>
+                    </a>
+                </li>
+              
+
+                <li>
+                    <a href="#">
+                        <i class="bi bi-list"></i>
+                        <p>Danh sách đơn hàng</p>
+                    </a>
+                </li>
+
+<!-- <!-- link crud --> -->
+				<li>
+				   <a href="#" th:href="@{/pet/list}"> 
+				        <i class="bi bi-bug"></i>
+				        <p>PET</p>
+				   </a>
+			   </li>
+                <li><a href="#" th:href="@{/breed/list}"> <i class="bi bi-octagon"></i>
+                        <p>Breeds</p>
+                    </a>
+                </li>
+                <li><a href="#" th:href="@{/size/list}"> <i class="bi bi-octagon"></i>
+                        <p>Size</p>
+                    </a>
+                </li>
+                <li>
+                    <a th:href="@{/coatType/list}">
+                        <i class="bi bi-list"></i>
+                        <p>List CoatType</p>
+                    </a>
+                </li>
+                  <li><a href="#" th:href="@{/photo/list}"> <i class="bi bi-octagon"></i>
+                        <p>Photograh</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mainContent">
+
+    </div>
+    
+
+</body>
+
+</html>

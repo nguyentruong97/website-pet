@@ -1,0 +1,9 @@
+package reponsitory;
+
+import org.springframework.data.repository.CrudRepository;
+
+import entity.petEntity;
+
+public interface PetRepository extends CrudRepository<petEntity, Integer> {
+	
+}

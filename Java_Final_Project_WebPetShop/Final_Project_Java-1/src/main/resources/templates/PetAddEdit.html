@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<title>Pet</title>
+</head>
+<body>
+	<div class="container" style="margin-top: 10px;">
+		<div class="row"
+			style="border: 1px darkgrey solid; border-radius: 10px; width: 50%; margin: 0 auto; padding: 20px;">
+			<div class="col-sm-12">
+
+				<h2 class="myclass">Pet</h2>
+				<li class="form-group"><a class="form-group-link" th:href="@{/admin}">Home Admin
+						
+				</a></li>
+				
+				
+				<form action="/pet/saveOrUpdate" th:object="${pet}" method="post">
+					<div th:if="${idPet>0}" class="form-group">
+						<label>ID Pet</label> <input th:field="*{idPet}" type="number"
+							class="form-control" placeholder="Enter id">
+					</div>
+					<div class="form-group">
+						<label>Name</label> <input th:field="*{name}" type="text"
+							class="form-control" placeholder="Enter name">
+					</div>
+					<div class="form-group">
+						<label>Age</label> <input th:field="*{age}" type="number"
+							class="form-control" placeholder="Enter age">
+					</div>
+					<div class="form-group">
+						<label>Weight</label> <input th:field="*{weight}" type="number"
+							class="form-control" placeholder="Enter weight">
+					</div>
+					<div class="form-group">
+						<label>Gender</label> <input th:field="*{sex}" type="number"
+							class="form-control" placeholder="Enter gender">
+					</div>
+					<div class="form-group">
+						<label>BirthDay</label> <input th:field="*{birthDay}" type="text"
+							class="form-control" placeholder="Enter birthDay">
+					</div>
+					<div class="form-group">
+						<label>CertifiedPedigree</label> <input
+							th:field="*{certifiedPedigree}" type="number"
+							class="form-control" placeholder="Enter certifiedPedigree">
+					</div>
+					<div class="form-group">
+						<label>Price</label> <input th:field="*{price}" type="number"
+							class="form-control" placeholder="Enter price">
+					</div>
+					<div class="form-group">
+						<label>Discount</label> <input th:field="*{discount}"
+							type="number" class="form-control" placeholder="Enter discount">
+					</div>
+					<div class="form-group">
+						<label>CreatedAt</label> <input th:field="*{createdAt}"
+							type="text" class="form-control" placeholder="Enter createdAt">
+					</div>
+					<div class="form-group">
+						<label>UpdatedAt</label> <input th:field="*{updatedAt}"
+							type="text" class="form-control" placeholder="Enter updatedAt">
+					</div>
+					<div class="form-group">
+						<label>PublishedAt</label> <input th:field="*{publishedAt}"
+							type="text" class="form-control" placeholder="Enter publishedAt">
+					</div>
+					<div class="form-group">
+						<label>StartsAt</label> <input th:field="*{startsAt}" type="text"
+							class="form-control" placeholder="Enter startsAtge">
+					</div>
+					<div class="form-group">
+						<label>EndsAt</label> <input th:field="*{endsAt}" type="text"
+							class="form-control" placeholder="Enter endsAt">
+					</div>
+					<div class="form-group">
+						<label>Status</label> <input th:field="*{status}" type="number"
+							class="form-control" placeholder="Enter status">
+					</div>
+
+					<input type="submit" value="Add" th:if="${idPet <= 0}"> <input
+						type="submit" class="register" value="Save changes"
+						th:if="${idPet > 0}">
+					<button type="reset" class="btn btn-primary">Cancel</button>
+					<a class="btn btn-primary" href="/pet/list">Display List Pet</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-image: url(/image/backgroundForm.jpg);
+}
+
+body .mainContent .myForm {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    width: 680px;
+    height: 450px;
+    margin: 200px 0 0 600px;
+    border-radius: 10px;
+}
+
+body .mainContent .myForm .text1 p {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600px;
+    margin: 20px 0 0 260px;
+}
+
+body .mainContent .myForm .inputClass .input-group {
+    width: 500px;
+    height: 50px;
+    margin: 30px 0 0 88px;
+}
+
+body .mainContent .myForm .btnClass .btnLogin {
+    margin: 30px 0 0 254px;
+}
+
+body .mainContent .myForm .btnClass .btnBack {
+    margin: 30px 0 0 24px;
+}
+
+body .mainContent .myForm .text2 {
+    display: flex;
+    margin: 35px 0 0 210px;
+}
+
+body .mainContent .myForm .text2 a {
+    padding-left: 3px;
+}
+
+body .mainContent .myForm .btnClass {
+    display: flex;
+}

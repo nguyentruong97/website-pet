@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/dangKy.css}">
+    <link rel="stylesheet" th:href="@{/bootstrap5/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/node_modules/bootstrap-icons/font/bootstrap-icons.css}">
+    <title>Đăng ký</title>
+    <script type="text/javascript" th:src="@{/bootstrap5/js/bootstrap.js}"></script>
+    <script type="text/javascript" th:src="@{bootstrap5/js/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/node_modules/bootstrap-icons/font/bootstrap-icons.json}"></script>
+</head>
+
+<body>
+    <div class="mainContent">
+        <div class="formName">
+
+            <div class="text1">
+                <p>Sign Up</p>
+            </div>
+            <div class="text2">
+                <p>
+                    Nếu chưa có tài khoản hãy đăng ký tại đây!!
+                </p>
+            </div>
+            <div class="logo">
+                <img src="/image/PETSHOPTest.png" alt="">
+            </div>
+        </div>
+        <form class="myForm" action="#" th:action="@{/login/register}" th:object="${user}" method="post">
+            <div class="text3">
+                <p>Hello, Bạn!!</p>
+            </div>
+            <div class="inputForm">
+                <div>
+                    <p>Họ và tên</p>
+                    <input type="text" placeholder="Họ và tên" required  th:field="*{firstName}">  
+                </div>
+                <div>
+                    <p>Tên tài khoản</p>
+                    <input type="text" placeholder="Tên tài khoản" required th:field="*{userName}">
+                </div>
+                <div>
+                    <p>Mật khẩu</p>
+                    <input type="password" placeholder="Mật khẩu" >
+                </div>
+                <div>
+                    <p>Xác nhận mật khẩu</p>
+                    <input type="password" placeholder="xác nhận mật khẩu"  required th:field="*{password}">
+                </div>
+                <div>
+                    <p>Email</p>
+                    <input placeholder="Email" type="email" required th:field="*{email}">
+                </div>
+                <div>
+                    <p>Số điện thoại</p>
+                    <input type="text" placeholder="Số điện thoại" th:field="*{mobile}">
+                </div>
+            </div>
+            <div class="btnClass">
+                <div class="btnSignup">
+                    <button type="submit" class="btn btn-outline-success">Đăng Ký</button>
+                </div>
+                <div class="btnHuy">
+                    <button type="button" class="btn btn-outline-danger"><a href="">Hủy</a></button>
+                </div>
+            </div>
+        </form>
+   
+
+    </div>
+
+    
+</body>
+
+</html>

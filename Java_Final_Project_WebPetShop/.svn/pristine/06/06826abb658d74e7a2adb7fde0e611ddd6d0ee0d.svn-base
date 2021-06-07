@@ -1,0 +1,9 @@
+package reponsitory;
+
+import org.springframework.data.repository.CrudRepository;
+
+import entity.imgEntity;
+
+public interface ImgRepository extends CrudRepository<imgEntity, Integer> {
+
+}
